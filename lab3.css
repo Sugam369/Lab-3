@@ -1,0 +1,85 @@
+/* Box-sizing reset to border-box */
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    width: 80%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the tabs section */
+.tabs {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+/* Styling for the unordered list within tabs */
+.tabs ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center; /* Center the tabs horizontally */
+    background-color: #f0f0f0;
+}
+
+/* Styling for individual tab items */
+.tabs li {
+    flex-grow: 1;
+}
+
+/* Styling for the tab buttons */
+.tabs li[role="tab"] {
+    padding: 12px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Styling for the selected tab */
+.tabs li[role="tab"][aria-selected="true"] {
+    background-color: #ccc;
+}
+
+/* Styling for the tab panels */
+.tabs div[role="tabpanel"] {
+    padding: 20px;
+    display: none;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Display the active tab panel */
+.tabs div[role="tabpanel"][aria-hidden="false"] {
+    display: block;
+}
